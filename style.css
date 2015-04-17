@@ -1,0 +1,198 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+  font-family:"Open Sans", arial, verdana, sans-serif;
+}
+
+header{
+  font-family:"Open Sans", arial, verdana, sans-serif;
+  font-weight:bold;
+  font-size:1.4em;
+  padding: 20px 15px;
+  top:0;
+  color:#248ffe;
+  border-bottom:1px solid rgba(0,0,0,.1);
+  background: rgba(255,255,255,.9);
+  z-index: 10000000000;
+  position:fixed;
+  width:100%;
+  transition: box-shadow .3s;
+}
+.shadow{
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  transition: box-shadow .3s;
+}
+#space{
+  height:61px;
+}
+.well{
+  height:140px;
+  border-bottom:1px solid rgba(0,0,0,.15);
+  position:relative;
+}
+h1{
+    font-size:1em;
+    font-weight:bold;
+    font-family:"Open Sans";
+}
+
+.car-desc{
+  padding: 18px 10px 0 18px;
+  color:#ff7e00;
+  transition: color .2s linear;
+}
+
+.sec-desc{
+  position:absolute;
+  top:38px;
+  left: 18px;
+  color:white;
+  font-weight:normal;
+  opacity:0;
+}
+
+.car-image{
+  margin:18px 20px; 
+  display:inline-block;
+  opacity:1;
+  height:70px;
+  width:auto;
+  overflow: hidden;
+  transition: margin-left .2s linear;
+}
+
+.model{
+  margin-left:15px;
+}
+
+.leaf{
+  margin-top:4px;
+  margin-left:3px;
+}
+
+h2{
+  font-size:2em;
+  font-family:"Open Sans";
+  font-weight:bold;
+}
+
+.cost{
+  color:rgba(0,0,0,.7);
+  position:absolute;
+  right:15px;
+  top:55px;
+  z-index:1;
+  transition: all .2s linear;
+}
+
+.details{
+  position:absolute;
+  right:0;
+  top:105px;
+  width:175px;
+  background:rgb(36,182,254);
+  border-top-left-radius:5px;
+  color: rgba(255,255,255,.9);
+  font-size:1em;
+  height:35px;
+  cursor:pointer;
+  transition:.2s all linear;
+  z-index:-1;
+}
+
+.expand.well{
+  transition:height .2s linear;
+  height:500px;
+}
+
+.expand .details{
+  width:100%;
+  transition:.2s all linear;
+  top:0;
+  height:80px;
+  border-radius:0;
+}
+
+.expand .dinfo{
+  opacity:0;
+  transition: all .2s linear;
+}
+
+.expand .cost{
+  top:40px;
+  color:rgba(255,255,255,.9);
+  transition: all .2s linear;
+}
+
+.expand .car-desc{
+  color:white;
+  transition: color .2s linear;
+}
+
+.expand .sec-desc{
+  opacity:1;
+}
+
+.expand .car-image{
+  margin-left:-200px;
+  transition: margin-left .2s linear;
+}
+
+.hide{
+  display:none;
+}
+
+.dinfo{
+  position:absolute;
+  right:10px;
+  top:10px;
+  opacity:1;
+  transition: all .2s linear;
+}
+.dinfo:after{
+  content:"v";
+  margin-left:10px;
+  font-weight:bold;
+}
