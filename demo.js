@@ -13,7 +13,7 @@ $(".well").click(function() {
 });
 
 function hideOthers(div){
-  var divs = ["#d1", "#d2", "#d3", "#d4"];
+  var divs = ["#d1", "#d2", "#d3", "#d4", "#d5"];
   for (i = 0; i < divs.length; i++) { 
     if(divs[i] != div){
       $(divs[i]).toggleClass("hide");
