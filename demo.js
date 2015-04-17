@@ -10,7 +10,7 @@ $(".well").click(function() {
   	$('html, body').animate({scrollTop: $(div).offset().top-61}, 200);
     $(div).toggleClass("expand");
   	setTimeout(function(){ hideOthers(div); }, 300);
-})
+});
 
 function hideOthers(div){
   var divs = ["#d1", "#d2", "#d3", "#d4"];
@@ -19,4 +19,4 @@ function hideOthers(div){
       $(divs[i]).toggleClass("hide");
     }
   }
-}
+};
