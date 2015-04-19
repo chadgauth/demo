@@ -25,5 +25,4 @@ function hideOthers(div){
       $(divs[i]).toggleClass("hide");
     }
   }
-  $('html, body').scrollTop($(div).offset().top-61);
 };
