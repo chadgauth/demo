@@ -10,9 +10,11 @@ window.onload = function () {
     if (typeof history.pushState === "function") {
         history.pushState("jibberish", null, null);
         window.onpopstate = function () {
+            history.pushState('newjibberish', null, null);
             if ($('html').hasClass(".expand")){
-                history.pushState('newjibberish', null, null);
                 $(".expand").trigger("click");
+            }else{
+                history.go(-2);
             }
             // Handle the back (or forward) buttons here
             // Will NOT handle refresh, use onbeforeunload for this.
