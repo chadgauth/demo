@@ -9,11 +9,13 @@ $(".well").click(function() {
   	var div = "#"+this.id.toString();
   	$('html, body').animate({scrollTop: $(div).offset().top-61}, 200);
     $(div).toggleClass("expand");
-  	setTimeout(function(){ hideOthers(div); }, 300);
+    $("#smoothspace").height($(window).height());
+  	setTimeout(function(){ hideOthers(div); }, 200);
+  	setTimeout(function(){ $("#smoothspace").height(0); }, 200);
 });
 
 function hideOthers(div){
-  var divs = ["#d1", "#d2", "#d3", "#d4", "#d5"];
+  var divs = ["#d1", "#d2", "#d3", "#d4"];
   for (i = 0; i < divs.length; i++) { 
     if(divs[i] != div){
       $(divs[i]).toggleClass("hide");
