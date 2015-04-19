@@ -42,7 +42,8 @@ $(".well").click(function() {
     $(div).toggleClass("expand");
     $("#smoothspace").height($(window).height());
   	setTimeout(function(){ hideOthers(div); }, $(div).hasClass("expand")? 200 : 0);
-  	setTimeout(function(){ $("#smoothspace").height(0); }, 200);
+  	if ($(div).hasClass("expand"))
+  	    setTimeout(function(){ $("#smoothspace").height(0); }, 200);
 });
 
 function hideOthers(div){
