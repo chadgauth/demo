@@ -12,6 +12,10 @@ $(".well").click(function() {
     $("#smoothspace").height($(window).height());
   	setTimeout(function(){ hideOthers(div); }, $(div).hasClass("expand")? 200 : 0);
   	setTimeout(function(){ $("#smoothspace").height(0); }, 200);
+  	if !($(div).hasClass("expand")){
+  	    $('html, body').animate({scrollTop: $(div).offset().top-61}, 0);
+  	    $('html, body').animate({scrollTop: $("#d1").offset().top-61}, 200);
+  	}
 });
 
 function hideOthers(div){
