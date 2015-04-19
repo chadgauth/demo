@@ -40,9 +40,9 @@ $(".well").click(function() {
   	var div = "#"+this.id.toString();
   	$('html, body').animate({scrollTop: $(div).offset().top-61}, 200);
     $(div).toggleClass("expand");
-    $("#smoothspace").height($(window).height());
   	setTimeout(function(){ hideOthers(div); }, $(div).hasClass("expand")? 200 : 0);
   	if ($(div).hasClass("expand"))
+  	    $("#smoothspace").height($(window).height());
   	    setTimeout(function(){ $("#smoothspace").height(0); }, 200);
 });
 
