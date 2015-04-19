@@ -11,7 +11,9 @@ window.onload = function () {
         history.pushState("jibberish", null, null);
         window.onpopstate = function () {
             history.pushState('newjibberish', null, null);
-            $(".expand").trigger("click");
+            if($(".expand").trigger("click").length===0){
+                history.go(-2);
+            }
             // Handle the back (or forward) buttons here
             // Will NOT handle refresh, use onbeforeunload for this.
         };
