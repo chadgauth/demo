@@ -36,7 +36,7 @@ window.onload = function () {
 
 $(".well").click(function() {
   	var div = "#"+this.id.toString();
-  	$('html, body').animate({scrollTop: $(div).offset().top-61}, 200);
+  	$('html, body').animate({scrollTop: $(div).offset().top-($("header").offset().top + 61)}, 200);
     $(div).toggleClass("expand");
   	setTimeout(function(){ hideOthers(div); }, $(div).hasClass("expand")? 200 : 0);
   	if ($(div).hasClass("expand"))
@@ -52,7 +52,7 @@ function hideOthers(div){
     }
   }
   if (!$(div).hasClass("expand")){
-  	    $('html, body').animate({scrollTop: $(div).offset().top-61}, 0);
-  	    $('html, body').animate({scrollTop: $("#d1").offset().top-61}, 200);
+  	    $('html, body').animate({scrollTop: $(div).offset().top-($("header").offset().top + 61)}, 0);
+  	    $('html, body').animate({scrollTop: $("#d1").offset().top-($("header").offset().top + 61) }, 200);
   	}
 };
