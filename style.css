@@ -143,6 +143,53 @@ h2{
   z-index:-1;
 }
 
+.detailed{
+  display:none;
+  padding-left:20px;
+  margin-top:-15px;
+}
+
+.detailed img{
+  width:15px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.detailed .fuel{
+  width:20px;
+  margin-right:-5px;
+}
+
+.cbreakdown{
+  float:right;
+  margin-right:15px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.detailed h1{
+  display:inline-block;
+  font-size:1.3em;
+  line-height:2em;
+  vertical-align: super;
+  margin-left:10px;
+  color: rgba(0,0,0,.85);
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.expand .detailed {
+  display:block;
+}
+
+.expand .detailed img{
+  opacity:1;
+}
+
+.expand .detailed h1 {
+  opacity:1;
+}
+
 .expand.well{
   height:500px;
 }
