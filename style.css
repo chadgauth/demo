@@ -276,3 +276,19 @@ body{
 	overflow:hidden;
 }
 
+#input{
+  margin: 100px auto;
+  width:190px;
+}
+
+#continue a{
+  background-color: #24b6fe;
+  padding:10px 20px;
+  border-radius:4px;
+  text-decoration:none;
+  color:white;
+}
+#continue{
+  margin: 0 auto;
+  width:110px;
+}
